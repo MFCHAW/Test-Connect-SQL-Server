@@ -8,7 +8,7 @@ import pyodbc
 # @st.experimental_memo
 def init_connection():
     return pyodbc.connect(
-        "DRIVER={ODBC Driver 17 for SQL Server};SERVER=LINTRAMAX154\LMONE;DATABASE=mydb;UID=PMSUser;PWD=lmone2014"
+        "DRIVER={ODBC Driver 17 for SQL Server};SERVER=lintramax-vm1a.southeastasia.cloudapp.azure.com, 14551;DATABASE=LONE_CONST2;UID=MengFei;PWD=Mfchaw1#"
     )
 
     # return pyodbc.connect(
@@ -36,8 +36,8 @@ def run_query(query):
         return cur.fetchall()
 
 
-rows = run_query('Select * from mytable;')
+rows = run_query('Select * from GMS_RegionStp;')
 
 # Print results
 for row in rows:
-    st.write(f'{row[0]} has a :{row[1]}:')
+    st.write(f'{row[0]} has a {row[1]}')
