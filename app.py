@@ -36,7 +36,7 @@ def run_query(query):
         return cur.fetchall()
 
 
-rows = run_query('Select * from GMS_RegionStp;')
+rows = run_query('Select * from GMS_EmpyPerMas;')
 
 # Print results
 for row in rows:
