@@ -7,20 +7,20 @@ import pyodbc
 
 # @st.experimental_memo
 def init_connection():
-    return pyodbc.connect(
-        "DRIVER={ODBC Driver 17 for SQL Server};SERVER=lintramax-vm1a.southeastasia.cloudapp.azure.com, 14551;DATABASE=LONE_CONST2;UID=MengFei;PWD=Mfchaw1#"
-    )
-
     # return pyodbc.connect(
-    #     "DRIVER={ODBC Driver 17 for SQL Server};SERVER="
-    #     + st.secrets["server"]
-    #     + ";DATABASE="
-    #     + st.secrets["database"]
-    #     + ";UID="
-    #     + st.secrets["username"]
-    #     + ";PWD="
-    #     + st.secrets["password"]
+    #     "DRIVER={ODBC Driver 17 for SQL Server};SERVER=lintramax-vm1a.southeastasia.cloudapp.azure.com, 14551;DATABASE=LONE_CONST2;UID=MengFei;PWD=Mfchaw1#"
     # )
+
+    return pyodbc.connect(
+        "DRIVER={ODBC Driver 17 for SQL Server};SERVER="
+        + st.secrets["server"]
+        + ";DATABASE="
+        + st.secrets["database"]
+        + ";UID="
+        + st.secrets["username"]
+        + ";PWD="
+        + st.secrets["password"]
+    )
 
 
 conn = init_connection()
