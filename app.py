@@ -40,4 +40,4 @@ rows = run_query('Select * from GMS_RegionStp;')
 
 # Print results
 for row in rows:
-    st.write(f'{row[0]} has a {row[1]}')
+    st.write(f'{row[3]} - {row[4]}')
